@@ -1,61 +1,62 @@
-num1,num2 = 200,123
+# More numeric conditions
+if abs(num1 - num2) < 100:
+    print("The absolute difference between num1 and num2 is less than 100")
 
-if num1 < num2:
-    print(f"sure {num1} is less than {num2}")
-elif num1 == num2:
-    print(f"sure {num1} is equal to {num2}")
-else:
-    print(f"{num1} is greater than {num2}")
-sentence ='''
-This is a random sentence i have just written.
-'''
+if num1 // num2 > 1:
+    print(f"{num1} divided by {num2} (integer division) is greater than 1")
 
-if "have" in sentence:
-    print("The word have is in sentence")
+if num2 != 0 and num1 % num2 == 0:
+    print(f"{num1} is divisible by {num2}")
 
-if "monumental" in sentence:
-    print("The word monumental is not in sentence")
+if (num1 + num2) % 5 == 0:
+    print("The sum of the two numbers is divisible by 5")
 
-if len(sentence) > 10:
-    print("This is a very long sentence")
+# More string conditions
+if " " in sentence:
+    print("The sentence contains spaces")
 
-# Numeric conditions
-if num1 % 2 == 0:
-    print(f"{num1} is even")
+if sentence.count("e") > 2:
+    print("The letter 'e' appears more than twice")
 
-if num2 % 2 != 0:
-    print(f"{num2} is odd")
+if sentence.find("random") != -1:
+    print("The word 'random' was found using find()")
 
-if num1 - num2 > 50:
-    print(f"The difference between {num1} and {num2} is greater than 50")
+if sentence[0].isupper():
+    print("The sentence starts with a capital letter")
 
-if num1 > 100 and num2 > 100:
-    print("Both numbers are greater than 100")
+# Checking character types
+if any(char.isdigit() for char in sentence):
+    print("The sentence contains at least one digit")
 
-if num1 > 100 or num2 > 100:
-    print("At least one number is greater than 100")
+if any(char.isupper() for char in sentence):
+    print("The sentence contains at least one uppercase letter")
 
-# String conditions
-if sentence.startswith("This"):
-    print("The sentence starts with 'This'")
+# Boolean combinations
+if "random" in sentence or "spontaneous" in sentence:
+    print("The sentence contains either 'random' or 'spontaneous'")
 
-if sentence.endswith("."):
-    print("The sentence ends with a period")
+if not "monumental" in sentence:
+    print("The word 'monumental' is not in the sentence")
 
-if sentence.islower():
-    print("The entire sentence is lowercase")
-else:
-    print("The sentence has some capital letters")
+# Using in-line if (ternary)
+print("num1 is positive" if num1 > 0 else "num1 is not positive")
 
-# Combining conditions
-if "random" in sentence and len(sentence) > 30:
-    print("The sentence contains 'random' and is fairly long")
+# Length-based conditions
+word_count = len(sentence.split())
+if word_count > 5:
+    print(f"The sentence has more than 5 words ({word_count} words)")
 
-# Nested condition
-if "sentence" in sentence:
-    if "written" in sentence:
-        print("The sentence contains both 'sentence' and 'written'")
+# Nested numeric condition
+if num1 > 100:
+    if num1 % 10 == 0:
+        print(f"{num1} is a multiple of 10 and greater than 100")
 
-# Check if a character exists
-if '.' in sentence:
-    print("The sentence contains a period '.'")
+# Case-sensitive check
+if "This" in sentence:
+    print("The word 'This' (capital T) is in the sentence")
+
+# List membership check
+keywords = ["random", "sentence", "example"]
+for word in keywords:
+    if word in sentence:
+        print(f"The word '{word}' is found in the sentence")
