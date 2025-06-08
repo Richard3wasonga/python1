@@ -1,47 +1,38 @@
-num = 10
+# Loop that doubles a number until it reaches or exceeds 1000
+value = 1
+while value < 1000:
+    print(f"Value is {value}")
+    value *= 2
 
-while num <20:
-    print(num)
-    num += 1
+# Loop that simulates a password check
+correct_password = "openai"
+attempt = ""
+while attempt != correct_password:
+    attempt = input("Enter the password: ")
+    if attempt != correct_password:
+        print("Incorrect password. Try again.")
+print("Access granted!")
 
-countdown = 5
+# Countdown timer with pause (simulated delay)
+import time
+seconds = 3
+while seconds > 0:
+    print(f"{seconds}...")
+    time.sleep(1)
+    seconds -= 1
+print("Time's up!")
 
-while countdown > 0:
-    print(f"Countdown: {countdown}")
-    countdown -= 1
-
-print("🚀 Liftoff!")
-
+# Loop that sums user-entered numbers until they type "done"
+sum_total = 0
 user_input = ""
+while user_input != "done":
+    user_input = input("Enter a number (or 'done' to finish): ")
+    if user_input.isdigit():
+        sum_total += int(user_input)
+print(f"Total sum: {sum_total}")
 
-while user_input.lower() != "exit":
-    user_input = input("Type something (or 'exit' to quit): ")
-    print(f"You typed: {user_input}")
-
-
-total = 0
-number = 1
-
-while total < 50:
-    total += number
-    print(f"Added {number}, total is now {total}")
-    number += 1
-
-
-x = 0
-
-while True:
-    print(f"x is {x}")
-    x += 1
-    if x == 5:
-        print("Breaking out of the loop.")
-        break
-
-n = 0
-
-while n < 10:
-    n += 1
-    if n % 2 == 0:
-        continue  # Skip even numbers
-    print(f"Odd number: {n}")
-
+# Loop that prints a pattern
+rows = 1
+while rows <= 5:
+    print("*" * rows)
+    rows += 1
