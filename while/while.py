@@ -1,3 +1,5 @@
+import time
+
 print("-" * 30)
 
 # 16. Loop that keeps asking for a number until an even one is entered
@@ -49,3 +51,49 @@ if word == reversed_word:
     print("It's a palindrome!")
 else:
     print("Not a palindrome.")
+
+print("-" * 30)
+
+# 21. Loop that keeps asking for a number greater than 100
+number = 0
+while number <= 100:
+    number = int(input("Enter a number greater than 100: "))
+print(f"Great! {number} is greater than 100.")
+
+print("-" * 30)
+
+# 22. Loop that builds a triangle of stars
+rows = 1
+while rows <= 5:
+    print("*" * rows)
+    rows += 1
+
+print("-" * 30)
+
+# 23. Loop that asks a riddle until the correct answer is given
+answer = ""
+while answer.lower() != "silence":
+    answer = input("What is so fragile that saying its name breaks it? ")
+print("Correct! The answer is silence.")
+
+print("-" * 30)
+
+# 24. Loop that collects names until 'done' is typed
+name = ""
+names = []
+while name.lower() != "done":
+    name = input("Enter a name (or 'done' to finish): ")
+    if name.lower() != "done":
+        names.append(name)
+print("Names collected:", names)
+
+print("-" * 30)
+
+# 25. Loop that prints only odd numbers up to 15
+num = 1
+while num <= 15:
+    if num % 2 != 0:
+        print(f"Odd number: {num}")
+    num += 1
+
+print("-" * 30)
