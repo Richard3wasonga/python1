@@ -2,7 +2,7 @@ import time
 
 print("-" * 30)
 
-# 16. Loop that keeps asking for a number until an even one is entered
+
 num = None
 while num is None or num % 2 != 0:
     num = int(input("Enter an even number: "))
@@ -10,7 +10,7 @@ print(f"Thanks! {num} is even.")
 
 print("-" * 30)
 
-# 17. Loop that simulates a countdown timer
+
 countdown = 5
 while countdown > 0:
     print(f"Countdown: {countdown}")
@@ -20,7 +20,7 @@ print("Blast off!")
 
 print("-" * 30)
 
-# 18. Loop that sums user-entered numbers until 0 is entered
+
 total = 0
 num = None
 while num != 0:
@@ -30,7 +30,7 @@ print(f"Total sum: {total}")
 
 print("-" * 30)
 
-# 19. Loop that simulates a progress bar
+
 progress = 0
 while progress <= 100:
     print(f"Progress: {progress}%")
@@ -40,7 +40,7 @@ print("Task complete.")
 
 print("-" * 30)
 
-# 20. Loop that checks if a word is a palindrome
+
 word = input("Enter a word to check if it's a palindrome: ").lower()
 reversed_word = ""
 index = len(word) - 1
@@ -54,7 +54,7 @@ else:
 
 print("-" * 30)
 
-# 21. Loop that keeps asking for a number greater than 100
+
 number = 0
 while number <= 100:
     number = int(input("Enter a number greater than 100: "))
@@ -62,7 +62,7 @@ print(f"Great! {number} is greater than 100.")
 
 print("-" * 30)
 
-# 22. Loop that builds a triangle of stars
+
 rows = 1
 while rows <= 5:
     print("*" * rows)
@@ -70,7 +70,7 @@ while rows <= 5:
 
 print("-" * 30)
 
-# 23. Loop that asks a riddle until the correct answer is given
+
 answer = ""
 while answer.lower() != "silence":
     answer = input("What is so fragile that saying its name breaks it? ")
@@ -78,7 +78,7 @@ print("Correct! The answer is silence.")
 
 print("-" * 30)
 
-# 24. Loop that collects names until 'done' is typed
+
 name = ""
 names = []
 while name.lower() != "done":
@@ -89,11 +89,52 @@ print("Names collected:", names)
 
 print("-" * 30)
 
-# 25. Loop that prints only odd numbers up to 15
+
 num = 1
 while num <= 15:
     if num % 2 != 0:
         print(f"Odd number: {num}")
     num += 1
+
+print("-" * 30)
+
+
+password = ""
+while password != "python123":
+    password = input("Enter the password: ")
+print("Access granted.")
+
+print("-" * 30)
+
+
+value = 2
+while value <= 1000:
+    print(f"Current value: {value}")
+    value *= 2
+
+print("-" * 30)
+
+
+import random
+roll = 0
+while roll != 6:
+    roll = random.randint(1, 6)
+    print(f"Rolled: {roll}")
+print("You rolled a 6!")
+
+print("-" * 30)
+
+
+fruits = ["apple", "banana", "cherry", "date"]
+while fruits:
+    print(f"Removing: {fruits.pop(0)}")
+
+print("-" * 30)
+
+
+a, b = 0, 1
+while a < 100:
+    print(a)
+    a, b = b, a + b
 
 print("-" * 30)
