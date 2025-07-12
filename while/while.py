@@ -85,3 +85,47 @@ while i < len(word):
     i += 1
 
 print("-" * 30)
+
+sum_total = 0
+num = 1
+while num <= 5:
+    sum_total += num
+    num += 1
+print(f"Sum of 1 to 5: {sum_total}")
+
+print("-" * 30)
+
+value = random.randint(1, 20)
+attempt = 0
+guess = -1
+while guess != value:
+    guess = int(input("Guess the number (1-20): "))
+    attempt += 1
+print(f"Correct in {attempt} tries.")
+
+print("-" * 30)
+
+data = [10, 20, 30, 40]
+i = 0
+while i < len(data):
+    print(f"Item {i}: {data[i]}")
+    i += 1
+
+print("-" * 30)
+
+n = 5
+factorial = 1
+while n > 0:
+    factorial *= n
+    n -= 1
+print(f"Factorial: {factorial}")
+
+print("-" * 30)
+
+temp = random.randint(25, 45)
+while temp < 40:
+    print(f"Temp: {temp}°C — Cooling down...")
+    temp += 1
+print(f"Reached {temp}°C — Alert triggered!")
+
+print("-" * 30)
