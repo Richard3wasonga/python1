@@ -129,3 +129,34 @@ while temp < 40:
 print(f"Reached {temp}°C — Alert triggered!")
 
 print("-" * 30)
+
+k = 10
+while k > 0:
+    print(f"Countdown: {k}")
+    k -= 1
+
+print("-" * 30)
+
+letters = "abcdef"
+pos = 0
+while pos < len(letters):
+    print(letters[pos].upper())
+    pos += 1
+
+print("-" * 30)
+
+even = 0
+while even <= 10:
+    print(f"Even: {even}")
+    even += 2
+
+print("-" * 30)
+
+tries = 0
+max_tries = 5
+answer = ""
+while answer != "yes" and tries < max_tries:
+    answer = input("Do you agree? (yes/no): ")
+    tries += 1
+
+print("-" * 30)
